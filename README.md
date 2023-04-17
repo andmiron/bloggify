@@ -1,1 +1,3 @@
-# SUBER_PROJECT
+# Bloggify
+
+Little project with testing some advanced nodejs features
