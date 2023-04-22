@@ -9,9 +9,13 @@ const morgan = require('morgan')
 const app = express();
 
 // Importing routes
-const viewRoutes = require('./viewRoutes')
-const authRoutes = require('./authRoutes')
-const blogRoutes = require('./blogRoutes')
+const viewRoutes = require('./routes/viewRoutes')
+const authRoutes = require('./routes/authRoutes')
+const blogRoutes = require('./routes/blogRoutes')
+
+// Pug engine
+app.set('view engine', 'pug')
+app.set('views', path.join(__dirname, 'views'))
 
 // Global middlewares
 app.use(express.static(path.join(__dirname, 'public')))
